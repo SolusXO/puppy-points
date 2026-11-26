@@ -1,0 +1,24 @@
+[Unit]
+Description=Puppy Points Discord bot
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=notify
+NotifyAccess=main
+User=puppy-points
+Group=puppy-points
+WorkingDirectory=/opt/puppy-points
+EnvironmentFile=/opt/puppy-points/puppy-points.env
+ExecStart=/opt/puppy-points/.venv/bin/python -B -u /opt/puppy-points/bot.py
+Restart=on-failure
+RestartSec=5s
+TimeoutStartSec=120s
+TimeoutStopSec=30s
+UMask=0077
+NoNewPrivileges=yes
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

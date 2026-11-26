@@ -1,0 +1,36 @@
+# Discord token and local configuration
+.env
+.env.*
+*.env
+*.env.*
+.token
+*.token
+token.txt
+discord-token.txt
+/update-source
+
+# Persistent SQLite storage and backup snapshots
+/data/
+/backups/
+*.db
+*.db-*
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.bak
+
+# Python virtual environments and bytecode
+.venv
+.venv.*
+venv/
+__pycache__/
+*.py[cod]
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+/.release.*
